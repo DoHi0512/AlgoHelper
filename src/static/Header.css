@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+header {
+  font-family: "Noto Sans JP", sans-serif;
+  border-bottom: solid 0.5px;
+  top: 0px;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  line-height: 100px;
+}
+.home,
+.statist,
+.recommend {
+  width: 180px;
+  height: 40px;
+}
+.home {
+  margin-left: 80px;
+  font-size: 56px;
+}
+.statist,
+.recommend,
+.login {
+  font-size: 26px;
+}
+.statist {
+  margin-left: 70px;
+}
+.A {
+  color: red;
+}
+.H {
+  color: #0ffa46;
+}
+.login{
+    margin-left: auto;
+    margin-right: 70px;
+}
