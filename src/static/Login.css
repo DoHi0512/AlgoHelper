@@ -36,6 +36,7 @@ button {
   height: 30px;
   background-color: #07f23e;
   color: white;
+  border: 0px;
 }
 .btns {
   display: flex;
