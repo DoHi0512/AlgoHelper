@@ -2,15 +2,26 @@ import React, { useState } from "react";
 import "../static/Login.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Header from "../components/Header";
 export default function Login() {
   const [userName, setUserName] = useState("");
   const [pwd, setPwd] = useState("");
   const navi = useNavigate();
-  let res = -1;
+  async function onLogin(e) {
+    e.preventDefault();
+    const form = { username: userName, password: pwd };
+    const response = await axios.post(
+      "http://127.0.0.1:8000/ahapp/login/",
+      form
+    );
+    localStorage.setItem("token", response.data["token"]);
+    alert("로그인 성공");
+    document.location.href = "/";
+  }
   return (
     <>
       <div className="loginBox">
-        <form>
+        <form onSubmit={onLogin}>
           <fieldset>
             <legend>로그인</legend>
             <input
@@ -30,23 +41,7 @@ export default function Login() {
               }}
             />
             <div className="btns">
-              <input
-                type="submit"
-                value="로그인"
-                onClick={() => {
-                  axios
-                    .post("http://127.0.0.1:8000/ahapp/dohi/loginCheck/", {
-                      userName: userName,
-                      pwd: pwd,
-                    })
-                    .then(function (response) {
-                      alert("로그인 성공");
-                    })
-                    .catch(function (error) {
-                      alert("비밀번호 또는 패스워드가 잘못되었습니다.");
-                    });
-                }}
-              />
+              <input type="submit" value="로그인" />
               <button onClick={() => navi("/register")}>회원가입</button>
             </div>
           </fieldset>

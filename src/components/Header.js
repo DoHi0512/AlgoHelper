@@ -3,19 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../static/Header.css";
 import axios from "axios";
 export default function Header(props) {
-  const [name, setName] = useState("");
   const navi = useNavigate();
-  const getAPI = async () => {
-    try {
-      const response = await axios.get(
-        "http://127.0.0.1:8000/ahapp/dohi/userInfo/2/"
-      );
-      setName(response.data.userName);
-    } catch (error) {
-      alert(error);
-    }
-  };
-  getAPI();
   return (
     <header>
       <div className="home" onClick={() => navi("/")}>
@@ -29,7 +17,7 @@ export default function Header(props) {
         문제 추천
       </div>
       <div className="login" onClick={() => navi("/login")}>
-        {name === "" ? "LOGIN" : name}
+        {props.token === "" ? "로그인" : "DOHI"}
       </div>
     </header>
   );
