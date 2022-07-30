@@ -8,7 +8,7 @@ import Recommend from "./pages/Recommend";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState(null);
   useEffect(() => {
     setToken(localStorage.getItem("token"));
   }, []);

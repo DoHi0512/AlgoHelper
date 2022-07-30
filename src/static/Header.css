@@ -22,7 +22,7 @@ header {
 }
 .statist,
 .recommend,
-.login {
+.info {
   font-size: 26px;
 }
 .statist {
@@ -34,8 +34,15 @@ header {
 .H {
   color: #0ffa46;
 }
-.login{
-    margin-left: auto;
-    margin-right: 70px;
+.info {
+  margin-left: auto;
+  margin-right: 70px;
+}
+.onLog{
+  display: flex;
+  margin: auto;
+}
+.logout{
+  margin-right: 50px;
 }
 

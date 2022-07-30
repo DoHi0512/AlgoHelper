@@ -16,8 +16,26 @@ export default function Header(props) {
       <div className="recommend" onClick={() => navi("/recommend")}>
         문제 추천
       </div>
-      <div className="login" onClick={() => navi("/login")}>
-        {props.token === "" ? "로그인" : "DOHI"}
+      <div className="info">
+        {props.token === null ? (
+          <div className="login" onClick={() => navi("/login")}>
+            LOGIN
+          </div>
+        ) : (
+          <div className="onLog">
+            <div
+              className="logout"
+              onClick={() => {
+                localStorage.removeItem("token");
+                localStorage.removeItem("username");
+                document.location.href = "/";
+              }}
+            >
+              LOGOUT
+            </div>
+            <div className="profile">{localStorage.getItem("username")}</div>
+          </div>
+        )}
       </div>
     </header>
   );

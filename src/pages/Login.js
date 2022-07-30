@@ -15,6 +15,7 @@ export default function Login() {
       form
     );
     localStorage.setItem("token", response.data["token"]);
+    localStorage.setItem("username", userName);
     alert("로그인 성공");
     document.location.href = "/";
   }

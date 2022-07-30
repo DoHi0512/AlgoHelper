@@ -18,7 +18,7 @@ export default function Register() {
       bojid: bojId,
     };
     const response = axios.post("http://127.0.0.1:8000/ahapp/register/", form);
-    alert(response.data);
+    alert("회원가입 성공")
     document.location.href = "/login";
   }
   return (
