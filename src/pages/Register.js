@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../static/Register.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Header from "../components/Header";
+
 export default function Register() {
   const navi = useNavigate();
   const [userName, setUserName] = useState("");

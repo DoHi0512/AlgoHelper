@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../static/Login.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Header from "../components/Header";
+
 export default function Login() {
   const [userName, setUserName] = useState("");
   const [pwd, setPwd] = useState("");
