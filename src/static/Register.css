@@ -24,8 +24,7 @@ legend {
 }
 .id,
 .pwd,
-.pwdCheck,
-.bojId {
+.pwdCheck {
   width: 260px;
   height: 30px;
   margin-left: auto;

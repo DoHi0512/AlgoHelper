@@ -1,3 +1,37 @@
 .con {
   margin-top: 100px;
+  display: flex;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 30px;
+  flex-direction: column;
+}
+.con div{
+  margin: auto;
+  border-bottom: solid 1px black;
+  width: 900px;
+  height: 100px;
+  line-height: 100px;
+}
+.con div img{
+  width: 25px;
+  height: 25px;
+}
+.con div a{
+  margin-left: 20px;
+}
+a:link {
+  color : black;
+  text-decoration: none;
+}
+a:visited {
+  color : black;
+  text-decoration: none;
+}
+a:hover {
+  color : black;
+  text-decoration: underline;
+}
+a:active {
+  color : black;
+  text-decoration: none;
 }
