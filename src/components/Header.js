@@ -14,7 +14,7 @@ export default function Header(props) {
         통계
       </div>
       <div className="recommend" onClick={() => navi("/recommend")}>
-        문제 추천
+        주간 문제
       </div>
       <div className="info">
         {props.token === null ? (
@@ -28,6 +28,7 @@ export default function Header(props) {
               onClick={() => {
                 localStorage.removeItem("token");
                 localStorage.removeItem("username");
+                localStorage.removeItem("problem");
                 document.location.href = "/";
               }}
             >

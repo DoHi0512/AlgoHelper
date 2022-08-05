@@ -16,11 +16,8 @@ export default function Login() {
     );
     localStorage.setItem("token", response.data["token"]);
     localStorage.setItem("username", userName);
-    if ((await response).status == 400) console.log("로그인 실패");
-    else {
-      console.log("로그인 성공");
-      document.location.href = "/";
-    }
+    console.log("로그인 성공");
+    document.location.href = "/";
   }
   return (
     <>

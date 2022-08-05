@@ -10,18 +10,14 @@ import axios from "axios";
 
 function App() {
   const [token, setToken] = useState(null);
-  const [problem, setProblem] = useState([]);
-  const [urls, setUrls] = useState([]);
-  const [imgs, setImgs] = useState([]);
   async function pullProblem() {
     const form = {
-      url: "https://solved.ac/search?query=*b5..r1&sort=random&direction=asc&page=1",
+      url: "https://solved.ac/search?query=*b5..s1+%21%40donghuni642&sort=random&direction=desc&page=1",
     };
     const response = axios.post("http://127.0.0.1:8000/ahapp/problem/", form);
-    setProblem((await response).data["problem"]);
-    setUrls((await response).data["urls"]);
-    setImgs((await response).data["imgurl"]);
-    console.log("가져오기 성공");
+    console.log((await response).data["problem"]);
+    const problem = (await response).data["problem"];
+    localStorage.problem = JSON.stringify(problem);
   }
   useEffect(() => {
     pullProblem();
@@ -34,11 +30,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
-        <Route
-          exact
-          path="/recommend"
-          element={<Recommend problems={problem} urls={urls} imgs={imgs} />}
-        />
+        <Route exact path="/recommend" element={<Recommend />} />
       </Routes>
     </>
   );

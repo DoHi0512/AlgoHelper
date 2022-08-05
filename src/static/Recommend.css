@@ -5,14 +5,14 @@
   font-size: 30px;
   flex-direction: column;
 }
-.con div{
+.con div {
   margin: auto;
   border-bottom: solid 1px black;
   width: 900px;
   height: 100px;
   line-height: 100px;
 }
-.con div img{
+.con div img {
   width: 25px;
   height: 25px;
 }
@@ -20,18 +20,18 @@
   margin-left: 20px;
 }
 a:link {
-  color : black;
+  color: black;
   text-decoration: none;
 }
 a:visited {
-  color : black;
+  color: black;
   text-decoration: none;
 }
 a:hover {
-  color : black;
+  color: black;
   text-decoration: underline;
 }
 a:active {
-  color : black;
+  color: black;
   text-decoration: none;
 }
