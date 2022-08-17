@@ -9,15 +9,20 @@ export default function Login() {
   const navi = useNavigate();
   async function onLogin(e) {
     e.preventDefault();
-    const form = { username: userName, password: pwd };
+    const form = { name: userName, password: pwd };
     const response = await axios.post(
       "http://127.0.0.1:8000/ahapp/login/",
       form
     );
-    localStorage.setItem("token", response.data["token"]);
-    localStorage.setItem("username", userName);
-    console.log("로그인 성공");
-    document.location.href = "/";
+    if (response.data["token"] == "error") {
+      alert("로그인 실패");
+      document.location.href = "/login";
+    } else {
+      localStorage.setItem("token", response.data["token"]);
+      localStorage.setItem("username", userName);
+      alert("로그인 성공");
+      document.location.href = "/";
+    }
   }
   return (
     <>

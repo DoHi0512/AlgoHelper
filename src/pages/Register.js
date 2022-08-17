@@ -8,12 +8,14 @@ export default function Register() {
   const [userName, setUserName] = useState("");
   const [passwd, setPasswd] = useState("");
   const [pasawdCheck, setPasswdCheck] = useState("");
+  const [bojid, setBojid] = useState("");
   async function onReg(e) {
     e.preventDefault();
     const form = {
-      username: userName,
+      name: userName,
       password: passwd,
       password2: pasawdCheck,
+      boj_id: bojid,
     };
     const response = axios.post("http://127.0.0.1:8000/ahapp/register/", form);
     alert("회원가입 성공");
@@ -47,6 +49,14 @@ export default function Register() {
               placeholder="비밀번호 재확인"
               onChange={(e) => {
                 setPasswdCheck(e.target.value);
+              }}
+            />
+            <input
+              type="text"
+              className="bojid"
+              placeholder="백준 아이디"
+              onChange={(e) => {
+                setBojid(e.target.value);
               }}
             />
             <input type="submit" value="회원가입" className="submit" />

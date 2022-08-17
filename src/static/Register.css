@@ -24,12 +24,13 @@ legend {
 }
 .id,
 .pwd,
-.pwdCheck {
+.pwdCheck,
+.bojid {
   width: 260px;
   height: 30px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .submit {
   width: 80px;
