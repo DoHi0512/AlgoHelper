@@ -1,8 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../static/Header.css";
 import axios from "axios";
 export default function Header(props) {
+  const [id, setId] = useState("");
+  async function pullId() {
+    const form = { name: localStorage.getItem("username") };
+    const response = axios.post("http://127.0.0.1:8000/ahapp/getboj/", form);
+    setId((await response).data);
+  }
+  useEffect(() => {
+    pullId();
+  }, []);
+  console.log(id);
   const navi = useNavigate();
   return (
     <header>
@@ -10,7 +20,7 @@ export default function Header(props) {
         <span className="A">A</span>
         <span className="H">H</span>
       </div>
-      <div className="statist" onClick={() => navi("/statist")}>
+      <div className="statist" onClick={() => navi("/stat")}>
         통계
       </div>
       <div className="recommend" onClick={() => navi("/recommend")}>
@@ -34,7 +44,7 @@ export default function Header(props) {
             >
               LOGOUT
             </div>
-            <div className="profile">{localStorage.getItem("username")}</div>
+            <div className="profile" onClick={() => window.open(`https://www.acmicpc.net/user/${id}`)}>{localStorage.getItem("username")}</div>
           </div>
         )}
       </div>

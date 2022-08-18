@@ -7,6 +7,7 @@ import Register from "./pages/Register";
 import Recommend from "./pages/Recommend";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Stat from "./pages/stat";
 
 function App() {
   const [token, setToken] = useState(null);
@@ -31,6 +32,7 @@ function App() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/recommend" element={<Recommend />} />
+        <Route exact path="/stat" element={<Stat />} />
       </Routes>
     </>
   );
