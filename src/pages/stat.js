@@ -86,6 +86,9 @@ export default function Stat() {
       },
     });
   }
+  useEffect(() => {
+    setWeek();
+  }, [])
   return (
     <div className="stat">
       <div className="select">

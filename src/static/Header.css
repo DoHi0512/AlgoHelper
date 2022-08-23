@@ -1,7 +1,11 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
-
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 header {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'GmarketSansMedium';
   border-bottom: solid 0.5px;
   top: 0px;
   position: fixed;
