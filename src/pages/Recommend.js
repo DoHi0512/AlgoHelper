@@ -13,10 +13,11 @@ export default function Recommend(props) {
   const [isChecked, setIsChecked] = useState(false);
   const [checkedItems, setCheckedItems] = useState(new Set());
   useEffect(() => {
-    let timer = setInterval(() => {
-      pullProblem();
-    }, 10000);
-    return () => clearInterval(timer);
+    // let timer = setInterval(() => {
+    //   pullProblem();
+    // }, 10000);
+    // return () => clearInterval(timer);
+    pullProblem();
   });
   const checkHandler = ({ target }) => {
     setIsChecked(!isChecked);
