@@ -1,0 +1,17 @@
+.stat {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+.stat .select{
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    margin-left: 100px;
+}
+.stat .chart{
+    margin-left: 300px;
+}
+p{
+    font-family: 'GmarketSansMedium';
+}

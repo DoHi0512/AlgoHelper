@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../static/Recommend.css";
-export default function Recommend(props) {
-  async function pullProblem() {
-    const form = {
-      url: `https://solved.ac/search?query=*b5..r1+%21%40${props.boj}&sort=random&direction=desc&page=1`,
-    };
-    const response = axios.post("http://127.0.0.1:8000/ahapp/problem/", form);
-    setPloblem((await response).data);
-  }
-  const [problem, setPloblem] = useState([]);
+export default function Recommend() {
+  const [problem, setProblem] = useState([]);
   const [isChecked, setIsChecked] = useState(false);
   const [checkedItems, setCheckedItems] = useState(new Set());
   useEffect(() => {
-    // let timer = setInterval(() => {
-    //   pullProblem();
-    // }, 10000);
-    // return () => clearInterval(timer);
-    pullProblem();
-  });
+    axios
+      .get("https://solved.ac/api/v3/search/problem?query=*r2..r1")
+      .then((Response) => {
+        setProblem(Response.data["items"]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   const checkHandler = ({ target }) => {
     setIsChecked(!isChecked);
     checkedItemHandler(target.value, target.checked);
@@ -35,14 +31,13 @@ export default function Recommend(props) {
   };
   const problemTable = problem.map((data, idx) => (
     <div>
-      <img src={data["img"]} />
       <a
-        href={data["url"]}
+        href={`https://www.acmicpc.net/problem/${data["problemId"]}`}
         className={`${
           checkedItems.has(idx.toString()) ? "solve" : "non_solve"
         }`}
       >
-        {data["problem"]}
+        {data["titleKo"]}
       </a>
       <input
         className="inp"

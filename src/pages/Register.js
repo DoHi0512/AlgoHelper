@@ -9,7 +9,7 @@ export default function Register() {
   const [passwd, setPasswd] = useState("");
   const [pasawdCheck, setPasswdCheck] = useState("");
   const [bojid, setBojid] = useState("");
-  async function onReg(e) {
+  function onReg(e) {
     e.preventDefault();
     const form = {
       name: userName,
@@ -17,9 +17,17 @@ export default function Register() {
       password2: pasawdCheck,
       boj_id: bojid,
     };
-    const response = axios.post("http://127.0.0.1:8000/ahapp/register/", form);
-    alert("회원가입 성공");
-    document.location.href = "/login";
+    axios
+      .post("http://127.0.0.1:8000/ahapp/register/", form)
+      .then((response) => {
+        console.log(response);
+        alert("회원가입 성공");
+        document.location.href = "/login";
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("회원가입 실패");
+      });
   }
   return (
     <>
