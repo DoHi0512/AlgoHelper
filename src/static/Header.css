@@ -51,4 +51,7 @@ header {
 .logout{
   margin-right: 50px;
 }
+.non_show{
+  display: none;
+}
 

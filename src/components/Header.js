@@ -9,7 +9,7 @@ export default function Header(props) {
         <span className="A">A</span>
         <span className="H">H</span>
       </div>
-      <div className="recommend" onClick={() => navi("/recommend")}>
+      <div className={props.token === null ? "non_show" : "recommend"} onClick={() => navi("/recommend")}>
         주간 문제
       </div>
       <div className="info">

@@ -5,7 +5,7 @@
 }
 .stat .select{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     font-size: 32px;
     margin-left: 100px;
 }
@@ -14,4 +14,9 @@
 }
 p{
     font-family: 'GmarketSansMedium';
+}
+.plz{
+    color : black;
+    margin: auto;
+    font-size: 100px;
 }

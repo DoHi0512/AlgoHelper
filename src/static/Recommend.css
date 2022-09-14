@@ -16,12 +16,12 @@
 .con div a{
   margin-left: 20px;
 }
-a{
+form a{
   font-size: 27px;
   font-family: 'GmarketSansMedium';
   text-decoration: none;
 }
-a:hover {
+form a:hover {
   text-decoration: underline;
 }
 button{
@@ -30,12 +30,32 @@ button{
   margin-left: 30px;
 }
 .inp{
-  width: 100px;
-  height: 25px;
+  margin-left: 15px;
+  width: 30px;
+  height: 30px;
 }
-.solve{
-  color: #009874;
+
+.non_show{
+  display: none;
 }
-.non_solve{
-  color: black;
+.bronze{
+  color: #ad5600;
+}
+.silver{
+  color: #435f7a;
+}
+.gold{
+  color: #ec9a00;
+}
+.platinum{
+  color: #27e2a4;
+}
+.diamond{
+  color: #00b4fc;
+}
+.ruby{
+  color: #ff0062;
+}
+.dif{
+  font-family: 'GmarketSansMedium';
 }
