@@ -12,6 +12,9 @@ export default function Header(props) {
       <div className={props.token === null ? "non_show" : "recommend"} onClick={() => navi("/recommend")}>
         주간 문제
       </div>
+      <div className={props.token === null ? "non_show" : "recommend"} onclick={()=> navi("/modify")}>
+        정보 수정
+      </div>
       <div className="info">
         {props.token === null ? (
           <div className="login" onClick={() => navi("/login")}>
