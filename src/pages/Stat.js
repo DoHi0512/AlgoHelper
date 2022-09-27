@@ -91,27 +91,21 @@ export default function Stat() {
   }, []);
   return (
     <div className="stat">
-      {localStorage.getItem("token") === null ? (
-        <a href="/login" className="plz">
-          로그인을 해주세요
-        </a>
-      ) : (
-        <div className="select">
-          <div>
-            <p onClick={() => setWeek()}>주간</p>
-            <p onClick={() => setMonth()}>월간</p>
-          </div>
-          <div className="chart">
-            <ApexCharts
-              options={options}
-              series={series}
-              type="line"
-              width={1000}
-              height={600}
-            />
-          </div>
+      <div className="select">
+        <div>
+          <p onClick={() => setWeek()}>주간</p>
+          <p onClick={() => setMonth()}>월간</p>
         </div>
-      )}
+        <div className="chart">
+          <ApexCharts
+            options={options}
+            series={series}
+            type="line"
+            width={1000}
+            height={600}
+          />
+        </div>
+      </div>
     </div>
   );
 }

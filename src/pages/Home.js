@@ -5,12 +5,13 @@ export default function Home() {
   return (
     <div className="container">
       <div className="texts">
-        <span>설명문</span>
+        <img src = "https://static.solved.ac/profile_bg/grass_30/grass_30.png"/>
+        <span>설명</span>
       </div>
       <div className="discription">
         <div>
           <h2>어떻게 사용하는지 모르겠다면?</h2>
-          <p>사용설명서를 한번 보세요!</p>
+          <p>사용설명서를 확인해 보세요!</p>
           <a href="instruction" className="test">
             설명서 보러 가기
             <BsArrowRightShort className="arrow" />
@@ -27,8 +28,8 @@ export default function Home() {
         <div>
           <h2>자신의 성실도를 한눈에 볼 수 있어요</h2>
           <p>월간,주간 통계 그래프를 통해 확인 할 수 있어요</p>
-          <a href="recommend" className="test">
-            문제 추천받기
+          <a href="stat" className="test">
+            통계 보러 가기
             <BsArrowRightShort className="arrow" />
           </a>
         </div>

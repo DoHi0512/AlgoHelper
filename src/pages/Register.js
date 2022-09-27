@@ -31,13 +31,11 @@ export default function Register() {
   }
   return (
     <>
-      <div className="registerBox">
+      <div className="registerbox">
         <form onSubmit={onReg}>
-          <fieldset>
-            <legend>회원 가입</legend>
+          <div className="btns">
             <input
               type="text"
-              className="id"
               placeholder="아이디"
               onChange={(e) => {
                 setUserName(e.target.value);
@@ -45,7 +43,6 @@ export default function Register() {
             />
             <input
               type="password"
-              className="pwd"
               placeholder="비밀번호"
               onChange={(e) => {
                 setPasswd(e.target.value);
@@ -53,22 +50,22 @@ export default function Register() {
             />
             <input
               type="password"
-              className="pwdCheck"
-              placeholder="비밀번호 재확인"
+              placeholder="비밀번호 재입력"
               onChange={(e) => {
                 setPasswdCheck(e.target.value);
               }}
             />
             <input
               type="text"
-              className="bojid"
               placeholder="백준 아이디"
               onChange={(e) => {
                 setBojid(e.target.value);
               }}
             />
-            <input type="submit" value="회원가입" className="submit" />
-          </fieldset>
+          </div>
+          <div className="subs">
+            <input type="submit" value="회원 가입" />
+          </div>
         </form>
       </div>
     </>

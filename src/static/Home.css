@@ -8,6 +8,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 .discription{
     display: flex;
@@ -30,11 +32,21 @@
 }
 .test{
     font-weight: bold;
-    color : #0ffa46;
+    color: #17ce3a;
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 .discription div h2{
+    font-weight: bold;
+}
+.texts img{
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+    transform: scale(1.02);
+}
+.texts span{
+    position: absolute;
     font-weight: bold;
 }

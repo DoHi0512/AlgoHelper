@@ -44,15 +44,35 @@ export default function Login() {
       document.location.href = "/";
     }
   }, [, localStorage.getItem("token")]);
-  function onLogin() {}
   return (
     <>
       <div className="loginbox">
         <form onSubmit={onLogin}>
           <div className="btns">
-            <input type="text" />
-            <input type="password" />
+            <input
+              type="text"
+              placeholder="아이디"
+              onChange={(e) => {
+                setUserName(e.target.value);
+              }}
+            />
+            <input
+              type="password"
+              placeholder="비밀번호"
+              onChange={(e) => {
+                setPwd(e.target.value);
+              }}
+            />
           </div>
+          <div className="subs">
+            <input type="submit" value="로그인" />
+          </div>
+          <p>
+            아이디가 없으시다면? 
+            <a href="register" className="go">
+              회원가입
+            </a>
+          </p>
         </form>
       </div>
     </>

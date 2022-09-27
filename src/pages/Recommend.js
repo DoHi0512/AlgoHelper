@@ -8,7 +8,7 @@ export default function Recommend() {
   useEffect(() => {
     axios
       .get(`http://127.0.0.1:8000/ahapp/problem/`, {
-        params: { username : localStorage.getItem("username") },
+        params: { username: localStorage.getItem("username") },
       })
       .then((Response) => {
         setProblem(Response.data["items"]);
@@ -48,7 +48,7 @@ export default function Recommend() {
             : data["level"] < 26
             ? "diamond"
             : "ruby"
-        }`}
+        } ${"prolink"}`}
       >
         {data["titleKo"]}
       </a>
