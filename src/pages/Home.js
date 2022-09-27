@@ -1,117 +1,38 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import ApexCharts from "react-apexcharts";
+import React from "react";
 import "../static/Home.css";
+import { BsArrowRightShort } from "react-icons/bs";
 export default function Home() {
-  const [series, setSeries] = useState([]);
-  const [options, setOptions] = useState({});
-  function setWeek() {
-    setSeries([
-      {
-        name: "Solved",
-        data: [10, 41, 35, 51, 49, 62, 69],
-      },
-    ]);
-    setOptions({
-      chart: {
-        zoom: {
-          enabled: false,
-        },
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        curve: "straight",
-      },
-      title: {
-        text: "주간 통계",
-        align: "center",
-      },
-      grid: {
-        row: {
-          colors: ["#f3f3f3f3", "transparent"], // takes an array which will be repeated on columns
-          opacity: 0.5,
-        },
-      },
-      xaxis: {
-        categories: ["Mon", "Tue", "Wed", "Thr", "Fri", "Sat", "Sun"],
-      },
-    });
-  }
-  function setMonth() {
-    setSeries([
-      {
-        name: "Solved",
-        data: [13, 21, 65, 51, 19, 92, 19, 53, 42, 72, 95, 71],
-      },
-    ]);
-    setOptions({
-      chart: {
-        zoom: {
-          enabled: false,
-        },
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        curve: "straight",
-      },
-      title: {
-        text: "월간 통계",
-        align: "center",
-      },
-      grid: {
-        row: {
-          colors: ["#f3f3f3f3", "transparent"], // takes an array which will be repeated on columns
-          opacity: 0.5,
-        },
-      },
-      xaxis: {
-        categories: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
-      },
-    });
-  }
-  useEffect(() => {
-    setWeek();
-  }, []);
   return (
-    <div className="stat">
-      {localStorage.getItem("token") === null ? (
-        <a href="/login" className="plz">
-          로그인을 해주세요
-        </a>
-      ) : (
-        <div className="select">
-          <div>
-            <p onClick={() => setWeek()}>주간</p>
-            <p onClick={() => setMonth()}>월간</p>
-          </div>
-          <div className="chart">
-            <ApexCharts
-              options={options}
-              series={series}
-              type="line"
-              width={1000}
-              height={600}
-            />
-          </div>
+    <div className="container">
+      <div className="texts">
+        <span>설명문</span>
+      </div>
+      <div className="discription">
+        <div>
+          <h2>어떻게 사용하는지 모르겠다면?</h2>
+          <p>사용설명서를 한번 보세요!</p>
+          <a href="instruction" className="test">
+            설명서 보러 가기
+            <BsArrowRightShort className="arrow" />
+          </a>
         </div>
-      )}
+        <div>
+          <h2>문제를 수준에 맞게 추천해 드려요</h2>
+          <p>무엇을 풀지 고민할 필요 없이 추천해주는 문제를 풀 수 있어요</p>
+          <a href="recommend" className="test">
+            문제 추천받기
+            <BsArrowRightShort className="arrow" />
+          </a>
+        </div>
+        <div>
+          <h2>자신의 성실도를 한눈에 볼 수 있어요</h2>
+          <p>월간,주간 통계 그래프를 통해 확인 할 수 있어요</p>
+          <a href="recommend" className="test">
+            문제 추천받기
+            <BsArrowRightShort className="arrow" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

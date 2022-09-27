@@ -1,0 +1,22 @@
+.stat {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+.stat .select{
+    display: flex;
+    flex-direction: row;
+    font-size: 32px;
+    margin-left: 100px;
+}
+.stat .chart{
+    margin-left: 300px;
+}
+.stat p{
+    font-family: 'GmarketSansMedium';
+}
+.plz{
+    color : black;
+    margin: auto;
+    font-size: 100px;
+}

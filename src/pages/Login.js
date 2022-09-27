@@ -44,33 +44,15 @@ export default function Login() {
       document.location.href = "/";
     }
   }, [, localStorage.getItem("token")]);
+  function onLogin() {}
   return (
     <>
-      <div className="loginBox">
+      <div className="loginbox">
         <form onSubmit={onLogin}>
-          <fieldset>
-            <legend>로그인</legend>
-            <input
-              type="text"
-              className="id"
-              placeholder="아이디"
-              onChange={(e) => {
-                setUserName(e.target.value);
-              }}
-            />
-            <input
-              type="password"
-              className="pwd"
-              placeholder="비밀번호"
-              onChange={(e) => {
-                setPwd(e.target.value);
-              }}
-            />
-            <div className="btns">
-              <input type="submit" value="로그인" />
-              <button onClick={() => navi("/register")}>회원가입</button>
-            </div>
-          </fieldset>
+          <div className="btns">
+            <input type="text" />
+            <input type="password" />
+          </div>
         </form>
       </div>
     </>
