@@ -1,7 +1,6 @@
 .con {
   margin-top: 100px;
   display: flex;
-  font-family: "Noto Sans JP", sans-serif;
   font-size: 30px;
   flex-direction: column;
 }
@@ -17,7 +16,6 @@
 }
 .prolink {
   font-size: 27px;
-  font-family: "GmarketSansMedium";
   text-decoration: none;
 }
 button {

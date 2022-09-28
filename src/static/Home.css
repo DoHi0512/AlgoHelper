@@ -23,7 +23,7 @@
     flex-direction: column;
 }
 .discription div{
-    padding-left: 150px;
+    padding-left: 250px;
     padding-top: 80px;
 }
 .arrow{
@@ -35,10 +35,14 @@
     color: #17ce3a;
     display: flex;
     align-items: center;
+    letter-spacing: -0.02ch;
     text-decoration: none;
 }
 .discription div h2{
-    font-weight: bold;
+    font-weight: 800;
+    word-break: keep-all;
+    font-size: 1.5em;
+    letter-spacing: -0.02ch;
 }
 .texts img{
     width: 100%;
@@ -49,4 +53,7 @@
 .texts span{
     position: absolute;
     font-weight: bold;
+}
+.discription p{
+    letter-spacing: -0.02ch;
 }

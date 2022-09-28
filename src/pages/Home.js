@@ -33,6 +33,14 @@ export default function Home() {
             <BsArrowRightShort className="arrow" />
           </a>
         </div>
+        <div>
+          <h2>검색 기능을 통해 문제를 검색 할 수 있어요</h2>
+          <p>제목, 티어, 태그 검색을 통해 찾고싶은 문제를 쉽게 찾을 수 있어요!</p>
+          <a href="search" className="test">
+            문제 검색하기
+            <BsArrowRightShort className="arrow" />
+          </a>
+        </div>
       </div>
     </div>
   );

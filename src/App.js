@@ -9,6 +9,7 @@ import Modify from "./pages/Modify";
 import { useEffect, useState } from "react";
 import Stat from "./pages/Stat";
 import Instruction from "./pages/Instruction";
+import Search from "./pages/Search";
 
 function App() {
   const [token, setToken] = useState(null);
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/recommend" element={<Recommend />} />
         <Route exact path="/modify" element={<Modify />} />
         <Route exact path="/instruction" element={<Instruction />} />
+        <Route exact path="/search" element={<Search />} />
       </Routes>
     </>
   );
