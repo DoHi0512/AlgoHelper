@@ -70,7 +70,7 @@ export default function Login() {
           <p>
             아이디가 없으시다면? 
             <a href="register" className="go">
-              회원가입
+              {" 회원가입"}
             </a>
           </p>
         </form>

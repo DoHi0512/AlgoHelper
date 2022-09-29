@@ -16,6 +16,7 @@
 }
 .prolink {
   font-size: 27px;
+  white-space:nowrap;
   text-decoration: none;
 }
 button {

@@ -16,10 +16,30 @@
     margin-left: 20px;
 }
 .searchInput{
+    padding-left: 20px;
     width: 600px;
     height: 50px;
     font-size: 20px;
     border-radius: 33px;
     border: 1px solid black;
+}
+.problem{
+    text-align: left;
+    height: 100px;
+    line-height: 100px;
+    width: 900px;
+    margin: auto;
+    border-bottom: 1px solid black;
+}
+.problem a{
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 27px;
+    white-space:nowrap;
+}
+.pros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 

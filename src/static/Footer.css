@@ -1,0 +1,11 @@
+footer h2{
+    bottom: 0px;
+    width: 100%;
+    background-color: #f7f8f9;
+    text-align: center;
+} 
+footer{
+    margin-top: 80px;
+    height: 70px;
+    line-height: 70px;
+}

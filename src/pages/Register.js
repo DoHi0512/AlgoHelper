@@ -66,6 +66,12 @@ export default function Register() {
           <div className="subs">
             <input type="submit" value="회원 가입" />
           </div>
+          <p>
+            아이디가 있으시다면? 
+            <a href="login" className="go">
+              {" 로그인"}
+            </a>
+          </p>
         </form>
       </div>
     </>

@@ -1,12 +1,16 @@
 import React from "react";
 import "../static/Home.css";
 import { BsArrowRightShort } from "react-icons/bs";
+import Footer from "../components/Footer";
 export default function Home() {
   return (
     <div className="container">
       <div className="texts">
-        <img src = "https://static.solved.ac/profile_bg/grass_30/grass_30.png"/>
-        <span>설명</span>
+        <img
+          src="https://static.solved.ac/profile_bg/hanbyeol_stars/hanbyeol_stars.jpg"
+          alt="이미지가 표시되지 않음"
+        />
+        <span>AlgoHelper</span>
       </div>
       <div className="discription">
         <div>
@@ -35,13 +39,16 @@ export default function Home() {
         </div>
         <div>
           <h2>검색 기능을 통해 문제를 검색 할 수 있어요</h2>
-          <p>제목, 티어, 태그 검색을 통해 찾고싶은 문제를 쉽게 찾을 수 있어요!</p>
+          <p>
+            제목, 티어, 태그 검색을 통해 찾고싶은 문제를 쉽게 찾아보세요!
+          </p>
           <a href="search" className="test">
             문제 검색하기
             <BsArrowRightShort className="arrow" />
           </a>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

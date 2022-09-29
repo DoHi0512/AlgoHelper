@@ -1,6 +1,5 @@
 import React from "react";
 import "../static/Instruction.css"
-import "../gifs/test.gif"
 export default function Instruction(){
     return (
         <div className="instruction">

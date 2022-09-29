@@ -9,14 +9,29 @@ export default function Header(props) {
         <span className="A">A</span>
         <span className="H">H</span>
       </div>
-      <div className={props.token === null ? "non_show" : "recommend"} onClick={() => navi("/recommend")}>
+      <div
+        className={props.token === null ? "non_show" : "recommend"}
+        onClick={() => navi("/recommend")}
+      >
         주간 문제
       </div>
-      <div className={props.token === null ? "non_show" : "recommend"} onClick={()=> navi("/modify")}>
-        정보 수정
-      </div>
-      <div className={props.token === null ? "non_show" : "recommend"} onClick={()=> navi("/search")}>
+      <div
+        className={props.token === null ? "non_show" : "recommend"}
+        onClick={() => navi("/search")}
+      >
         문제 검색
+      </div>
+      <div
+        className={props.token === null ? "non_show" : "recommend"}
+        onClick={() => navi("/stat")}
+      >
+        통계 보기
+      </div>
+      <div
+        className={props.token === null ? "non_show" : "recommend"}
+        onClick={() => navi("/modify")}
+      >
+        정보 수정
       </div>
       <div className="info">
         {props.token === null ? (

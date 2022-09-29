@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import Stat from "./pages/Stat";
 import Instruction from "./pages/Instruction";
 import Search from "./pages/Search";
+import Footer from "./components/Footer";
 
 function App() {
   const [token, setToken] = useState(null);
