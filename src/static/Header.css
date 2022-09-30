@@ -15,6 +15,7 @@ header {
 .recommend {
   width: 180px;
   height: 40px;
+  cursor : pointer;
 }
 .home {
   margin-left: 80px;
@@ -23,7 +24,7 @@ header {
 .statist,
 .recommend,
 .info {
-  font-size: 26px;
+  font-size: 22px;
 }
 .statist {
   margin-left: 70px;
