@@ -2,16 +2,35 @@ import React from "react";
 import "../static/Home.css";
 import { BsArrowRightShort } from "react-icons/bs";
 import Footer from "../components/Footer";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 export default function Home() {
   return (
     <div className="container">
-      <div className="texts">
-        <img
-          src="https://static.solved.ac/profile_bg/hanbyeol_stars/hanbyeol_stars.jpg"
-          alt="이미지가 표시되지 않음"
-        />
-        <span>AlgoHelper</span>
-      </div>
+      <Carousel autoPlay={true} showThumbs={false} >
+        <div className="texts">
+          <img
+            src="https://static.solved.ac/profile_bg/hanbyeol_stars/hanbyeol_stars.jpg"
+            alt="이미지가 표시되지 않음"
+          />
+          <span>AlgoHelper</span>
+        </div>
+        <div className="texts">
+          <img
+            src="https://static.solved.ac/profile_bg/suapc2021s/suapc2021s.png"
+            alt="이미지가 표시되지 않음"
+          />
+          <span>AlgoHelper</span>
+        </div>
+        <div className="texts">
+          <img
+            src="https://static.solved.ac/profile_bg/silvercup2022/silvercup2022.png"
+            alt="이미지가 표시되지 않음"
+          />
+          <span>AlgoHelper</span>
+        </div>
+      </Carousel>
+
       <div className="discription">
         <div>
           <h2>어떻게 사용하는지 모르겠다면?</h2>
