@@ -10,28 +10,34 @@ import { useEffect, useState } from "react";
 import Stat from "./pages/Stat";
 import Instruction from "./pages/Instruction";
 import Search from "./pages/Search";
-import Footer from "./components/Footer";
-
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  iserRecoilState,
+  userRecoilValue,
+} from "recoil";
+export const tokenState = atom({
+  key: "token",
+  default: null,
+});
 function App() {
-  const [token, setToken] = useState(null);
-  useEffect(() => {
-    setToken(localStorage.getItem("token"));
-  }, []);
   return (
     <>
-      <Header token={token} />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/stat" element={<Stat />} />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/register" element={<Register />} />
-        <Route exact path="/recommend" element={<Recommend />} />
-        <Route exact path="/modify" element={<Modify />} />
-        <Route exact path="/instruction" element={<Instruction />} />
-        <Route exact path="/search" element={<Search />} />
-      </Routes>
+      <RecoilRoot>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/stat" element={<Stat />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/register" element={<Register />} />
+          <Route exact path="/recommend" element={<Recommend />} />
+          <Route exact path="/modify" element={<Modify />} />
+          <Route exact path="/instruction" element={<Instruction />} />
+          <Route exact path="/search" element={<Search />} />
+        </Routes>
+      </RecoilRoot>
     </>
   );
 }
-
 export default App;

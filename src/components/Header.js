@@ -1,8 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../static/Header.css";
+import { tokenState } from "../App";
+import { useRecoilState, useRecoilValue } from "recoil";
 export default function Header(props) {
   const navi = useNavigate();
+  const token = useRecoilValue(tokenState)
   return (
     <header>
       <div className="home" onClick={() => navi("/")}>
@@ -34,7 +37,7 @@ export default function Header(props) {
         정보 수정
       </div>
       <div className="info">
-        {props.token === null ? (
+        { token === null ? (
           <div className="login" onClick={() => navi("/login")}>
             LOGIN
           </div>

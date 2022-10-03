@@ -24,7 +24,7 @@ export default function Home() {
         </div>
         <div className="texts">
           <img
-            src="https://static.solved.ac/profile_bg/silvercup2022/silvercup2022.png"
+            src="https://static.solved.ac/profile_bg/_allsolve/allsolve-gold1.jpg"
             alt="이미지가 표시되지 않음"
           />
           <span>AlgoHelper</span>
