@@ -7,7 +7,7 @@ import { tokenState } from "../App";
 export default function Login() {
   const [userName, setUserName] = useState("");
   const [pwd, setPwd] = useState("");
-  const [state, setState] = useRecoilState(tokenState);
+  const [token, setToken] = useRecoilState(tokenState);
   const navi = useNavigate();
   function onLogin(e) {
     e.preventDefault();
@@ -18,7 +18,7 @@ export default function Login() {
         if (response.data["token"] === "error") {
           alert("아이디 또는 비밀번호가 틀렸습니다");
         } else {
-          setState(response.data["token"]);
+          setToken((prev) => response.data["token"]);
           localStorage.setItem("token", response.data["token"]);
           localStorage.setItem("username", userName);
           alert("로그인 성공");

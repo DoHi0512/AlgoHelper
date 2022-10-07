@@ -19,7 +19,7 @@ import {
 } from "recoil";
 export const tokenState = atom({
   key: "token",
-  default: null,
+  default: '',
 });
 function App() {
   return (
