@@ -8,7 +8,6 @@ export default function Login() {
   const [userName, setUserName] = useState("");
   const [pwd, setPwd] = useState("");
   const [token, setToken] = useRecoilState(tokenState);
-  const navi = useNavigate();
   function onLogin(e) {
     e.preventDefault();
     const form = { name: userName, password: pwd };
